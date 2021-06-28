@@ -2,18 +2,18 @@
 using namespace std;
 //class University{
 //	private:
-//		int Teacher_id;
+//		int Mess_id;
 //		int Student_id;
 //		int Employee_id;
 //	public:	
-//	University(int Teacher_id,int Student_id,int Employee_id){
-//		this->Teacher_id=Teacher_id;
+//	University(int Mess_id,int Student_id,int Employee_id){
+//		this->Mess_id=Mess_id;
 //		this->Student_id=Student_id;
 //		this->Employee_id=Employee_id;
 //	}	
-//	int getteacher()
+//	int getmess()
 //	{
-//		return this->Teacher_id;
+//		return this->Mess_id;
 //	}	
 //	int getstudent()
 //	{
@@ -86,23 +86,70 @@ class Employee{
  
 		}
 }; 
-//class Teacher::public University{
-//	
-//}; 
+class Mess{
+	private:
+		int Worker_id;
+		string Wname;
+		int Wage;
+		string Items;
+		double Bill;
+	public:
+		Mess(int Worker_id,string Wname,int Wage,string Items,double Bill)
+		{
+			this->Worker_id=Worker_id;
+			this->Wname=Wname;
+			this->Wage=Wage;
+			this->Items=Items;
+			this->Bill=Bill;
+		}
+		int getWorker_id()
+		{
+			return this->Worker_id;
+		}
+		string getWname()
+		{
+			return this->Wname;
+		}
+			int getWage()
+		{
+			return this->Wage;
+		}
+		string getItems()
+		{
+			return this->Items;
+		}
+		double getBill()
+		{
+			return this->Bill;
+		}
+		void getAllMess()
+		{
+			cout<<"Worker id is:"<<Worker_id<<endl;
+			cout<<"Wname is:"<<Wname<<endl;
+			cout<<"Wage is:"<<Wage<<endl;
+			cout<<"Items are:"<<Items<<endl;
+			cout<<"Bill is:"<<Bill<<endl;
+		}
+	
+}; 
+
+
 //class Student::public University{
 //	
 //}; 
 int main(){
 	ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 	Employee E1(101,"Aula venkates",21,"SDE",'M',50000.000,3.5);
-	int id;
-	cout<<"enter id";
-	cin>>id;
-	if(id==E1.getEmp_id()){
+//	int id;
+//	cout<<"enter id";
+//	cin>>id;
+//	if(id==E1.getEmp_id()){
 	E1.getAllDetails();	
-	}
-	else{
-		cout<<"number thapu ra pukaa"<<endl;
-	}
+//	}
+//	else{
+//		cout<<"number thapu ra pukaa"<<endl;
+//	}
+    Mess M1(511,"CHinaBeer",10,"puri,dosa,idly,vada",100.5);
+    M1.getAllMess();
 	return 0;
 }
