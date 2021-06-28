@@ -131,60 +131,7 @@ class Mess{
 			cout<<"Bill is:"<<Bill<<endl;
 		}
 	
-};
-
-class Student{
-	private:
-		int Student_id;
-		string Sname;
-		int Sage;
-		char Sgender;
-		string Sbranch;
-		float Sfees;
-	public:
-		Student(int Student_id,string Sname,int Sage,char Sgender,string Sbranch,float Sfees)
-		{
-			this->Student_id=Student_id;
-			this->Sname=Sname;
-			this->Sage=Sage;
-			this->Sgender=Sgender;
-			this->Sbranch=Sbranch;
-			this->Sfees=Sfees;
-		}
-		int getStudent_id()
-		{
-			return this->Student_id;
-		}
-		string getSname()
-		{
-			return this->Sname;
-	    }
-	    int getSage()
-		{
-			return this->Sage;
-		}
-		char getSgender()
-		{
-			return this->Sgender;
-		}
-		string getSbranch()
-		{
-			return this->Sbranch;
-		}
-		float getSfees()
-		{
-			return this->Sfees;
-		}
-		void getAllStDetails()
-		{
-			cout<<"student id : "<<Student_id<<endl;
-			cout<<"student name : "<<Sname<<endl;
-			cout<<"student age : "<<Sage<<endl;
-			cout<<"Stuent gender : "<<Sgender<<endl;
-			cout<<"Student branch : "<<Sbranch<<endl;
-			cout<<"Student Fees : "<<Sfees<<endl;
-		}
-};
+}; 
 
 
 //class Student::public University{
@@ -204,8 +151,5 @@ int main(){
 //	}
     Mess M1(511,"CHinaBeer",10,"puri,dosa,idly,vada",100.5);
     M1.getAllMess();
-    
-    Student S1(502,"Swaroop",22,'M',"CSE",90000);
-    S1.getAllStDetails();
 	return 0;
 }
