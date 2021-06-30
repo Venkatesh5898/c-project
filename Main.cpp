@@ -186,12 +186,109 @@ class Student{
 		}
 };
 
-
+bool searchstudentId(int student_id,int student_array[]){
+int count=0;
+int n=10;
+for(int i=0;i<n;i++){
+	if(student_array[i]==student_id){
+		count++;
+	}
+}
+if(count!=0){
+	return true;
+}
+else{
+	return false;
+}
+return -1;
+}
+bool searchteacherId(int teacher_id,int teacher_array[]){
+int count=0;
+int n=10;
+for(int i=0;i<n;i++){
+	if(teacher_array[i]==teacher_id){
+		count++;
+	}
+}
+if(count!=0){
+	return true;
+}
+else{
+	return false;
+}
+return -1;
+}
+bool searchstaffId(int staff_id,int staff_array[]){
+int count=0;
+int n=10;
+for(int i=0;i<n;i++){
+	if(staff_array[i]==staff_id){
+		count++;
+	}
+}
+if(count!=0){
+	return true;
+}
+else{
+	return false;
+}
+return -1;
+}
 //class Student::public University{
 //	
 //}; 
 int main(){
-	ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-	cout<<"**************************************UNIVERSITY MANAGEMENT SYSTEM*************************";
+	int student_array[10]={101,102,103,104,105,106,107,108,109,110};
+	int teacher_array[10]={2501,2502,2503,2504,2505,2506,2507,2508,2509,2510};
+	int staff_array[10]={901,902,903,904,905,906,907,908,909,910};
+//	ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+	cout<<"**************************************UNIVERSITY MANAGEMENT SYSTEM*************************\n";
+	cout<<"Welcome to Interface\n";
+	cout<<"1.Enter 1 to login Student Interface\n";
+	cout<<"2.Enter 2 to login Teacher Interface\n";
+	cout<<"3.Enter 3 to login Mess Inetrface\n";
+	int n;
+	cin>>n;
+	if(n==1){
+		cout<<"Welcome to student interface\n";
+		cout<<"Please confrim you as a Student by entering the id"<<endl;
+		int Student_id;
+		cin>>Student_id;
+		if(searchstudentId(Student_id,student_array)==true){
+			cout<<"Login Sucessfull"<<endl;
+		}
+		else{
+			cout<<"details not found please enter valid student id"<<endl;
+		}
+		
+		
+	}
+	else if(n==2){
+		cout<<"Welcome to Teacher interface\n";
+		cout<<"Please confrim you as a Teacher by entering the id"<<endl;
+		int Teacher_id;
+		cin>>Teacher_id;
+		if(searchteacherId(Teacher_id,teacher_array)==true){
+			cout<<"Login Sucessfull"<<endl;
+		}
+		else{
+			cout<<"details not found please enter valid teacher id"<<endl;
+		}
+	}
+	else if(n==3){
+		cout<<"Welcome to Mess interface\n";
+		cout<<"Please confrim you as a Staff by entering the id"<<endl;
+		int Staff_id;
+		cin>>Staff_id;
+		if(searchstaffId(Staff_id,staff_array)==true){
+			cout<<"Login Sucessfull"<<endl;
+		}
+		else{
+			cout<<"details not found please enter valid staff id"<<endl;
+		}
+	}
+	else{
+		cout<<"Please Enter valid number\n";
+	}
 	return 0;
 }
