@@ -270,6 +270,22 @@ int main(){
 		cin>>Teacher_id;
 		if(searchteacherId(Teacher_id,teacher_array)==true){
 			cout<<"Login Sucessfull"<<endl;
+			cout<<"What do you want to do?"<<endl;
+			cout<<"1.Enter 1 to get your details"<<endl;
+			cout<<"2.Enter 2 to see your academics"<<endl;
+			cout<<"3.Enter 3 to see your score"<<endl;
+			cout<<"4.Enter 4 to see your balance"<<endl;
+			cout<<"5.Enter 5 to manage your mess details"<<endl;
+			char _continue;
+			while(_continue=="y"or_continue=="Y"){
+				//add the logic you want;
+				
+			 	cin>>_continue;
+				if(_continue=="n"or_continue=="N"){
+					break;
+				}
+				
+			}
 		}
 		else{
 			cout<<"details not found please enter valid teacher id"<<endl;
