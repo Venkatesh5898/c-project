@@ -192,20 +192,6 @@ class Student{
 //}; 
 int main(){
 	ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-	Employee E1(101,"Aula venkates",21,"SDE",'M',50000.000,3.5);
-//	int id;
-//	cout<<"enter id";
-//	cin>>id;
-//	if(id==E1.getEmp_id()){
-	E1.getAllDetails();	
-//	}
-//	else{
-//		cout<<"number thapu ra pukaa"<<endl;
-//	}
-    Mess M1(511,"CHinaBeer",10,"puri,dosa,idly,vada",100.5);
-    M1.getAllMess();
-    
-    Student S1(502,"Swaroop",22,'M',"CSE",90000);
-    S1.getAllStDetails();
+	cout<<"**************************************UNIVERSITY MANAGEMENT SYSTEM*************************";
 	return 0;
 }
