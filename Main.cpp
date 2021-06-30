@@ -249,7 +249,10 @@ int main(){
 	cout<<"3.Enter 3 to login Mess Inetrface\n";
 	int n;
 	cin>>n;
+	bool flag=true;
+	while(flag){
 	if(n==1){
+		cout<<endl;
 		cout<<"Welcome to student interface\n";
 		cout<<"Please confrim you as a Student by entering the id"<<endl;
 		int Student_id;
@@ -262,19 +265,10 @@ int main(){
 			cout<<"3.Enter 3 to see your score"<<endl;
 			cout<<"4.Enter 4 to see your balance"<<endl;
 			cout<<"5.Enter 5 to manage your mess details"<<endl;
-			int n2;
-			char _continue;
-			while(_continue=="y"or_continue=="Y"){
-				//add the logic you want;
-				cin>>n2;
-			 	cin>>_continue;
-				if(_continue=="n"or_continue=="N"){
-					break;
-				}
-				
-			}
+			break;
 		}
 		else{
+			cout<<endl;
 			cout<<"details not found please enter valid student id"<<endl;
 		}
 		
@@ -290,19 +284,10 @@ int main(){
 			cout<<"What do you want to do?"<<endl;
 			cout<<"1.Enter 1 to get your details"<<endl;
 			cout<<"2.Enter 2 to see your branch"<<endl;
-			int n1;
-			char _continue;
-			while(_continue=="y"or_continue=="Y"){
-				//add the logic you want;
-				cin>>n1;
-			 	cin>>_continue;
-				if(_continue=="n"or_continue=="N"){
-					break;
-				}
-				
-			}
+			break;
 		}
 		else{
+			cout<<endl;
 			cout<<"details not found please enter valid teacher id"<<endl;
 		}
 	}
@@ -313,13 +298,20 @@ int main(){
 		cin>>Staff_id;
 		if(searchstaffId(Staff_id,staff_array)==true){
 			cout<<"Login Sucessfull"<<endl;
+			cout<<"What do you want to do?"<<endl;
+			cout<<"1.Enter 1 to get your details"<<endl;
+			cout<<"2.Enter 2 to see your branch"<<endl;
+			break;
 		}
 		else{
+			cout<<endl;
 			cout<<"details not found please enter valid staff id"<<endl;
 		}
 	}
 	else{
 		cout<<"Please Enter valid number\n";
 	}
+}
+	
 	return 0;
 }
