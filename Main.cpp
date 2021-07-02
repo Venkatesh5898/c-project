@@ -247,12 +247,11 @@ return -1;
 
  
 int main(){
-<<<<<<< Updated upstream
-	int student_array[10000]={};
-	int teacher_array[10000];
-	int staff_array[10000];
-=======
-	
+	cout<<"**************************************UNIVERSITY MANAGEMENT SYSTEM*************************\n";
+	cout<<"Welcome to Interface\n";
+	cout<<"1.Enter 1 to login Student Interface\n";
+	cout<<"2.Enter 2 to login Teacher Interface\n";
+	cout<<"3.Enter 3 to login Mess Inetrface\n";
 	Student s1[10]={Student(101,"venkatesh",20,'M',"CSE",45000,9.0),
 	Student(102,"swaroop",20,'M',"CSE",45000,9.0),
 	Student(103,"ganesh",22,'M',"CSE",45000,8.5),
@@ -269,13 +268,8 @@ int main(){
 	int Student_array[10]={101,102,103,104,105,106,107,108,109,110};
 	int teacher_array[10]={2501,2502,2503,2504,2505,2506,2507,2508,2509,2510};
 	int staff_array[10]={901,902,903,904,905,906,907,908,909,910};
->>>>>>> Stashed changes
 //	ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-	cout<<"**************************************UNIVERSITY MANAGEMENT SYSTEM*************************\n";
-	cout<<"Welcome to Interface\n";
-	cout<<"1.Enter 1 to login Student Interface\n";
-	cout<<"2.Enter 2 to login Teacher Interface\n";
-	cout<<"3.Enter 3 to login Mess Inetrface\n";
+
 	int n;
 	cin>>n;
 	bool flag=true;
@@ -298,15 +292,17 @@ int main(){
 			cout<<"3.Enter 3 to see your score"<<endl;
 			cout<<"4.Enter 4 to see your balance"<<endl;
 			cout<<"5.Enter 5 to manage your mess details"<<endl;
-<<<<<<< Updated upstream
-			int number_student;
-			cin>>number_stduent;
 			
-=======
 				cin>>number;
 				if(number==1){
+					int i;
 					cout<<"Details are"<<endl;
-					s1[10].getAllStDetails();
+					for(i=0;i<10;i++){
+						if(Student_array[i]==Student_id){
+							break;
+						}
+					}
+					s1[i].getAllStDetails();
 					
 				}
 				if(number==2){
@@ -338,7 +334,6 @@ int main(){
 					}
 				
 			}
->>>>>>> Stashed changes
 			break;
 		}
 		else{
