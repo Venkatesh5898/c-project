@@ -141,8 +141,9 @@ class Student{
 		char Sgender;
 		string Sbranch;
 		float Sfees;
+		float cgpa;
 	public:
-		Student(int Student_id,string Sname,int Sage,char Sgender,string Sbranch,float Sfees)
+		Student(int Student_id,string Sname,int Sage,char Sgender,string Sbranch,float Sfees,float cgpa)
 		{
 			this->Student_id=Student_id;
 			this->Sname=Sname;
@@ -150,6 +151,7 @@ class Student{
 			this->Sgender=Sgender;
 			this->Sbranch=Sbranch;
 			this->Sfees=Sfees;
+			this->cgpa=cgpa;
 		}
 		int getStudent_id()
 		{
@@ -175,6 +177,9 @@ class Student{
 		{
 			return this->Sfees;
 		}
+		float getcgpa(){
+			return this->cgpa;
+		}
 		void getAllStDetails()
 		{
 			cout<<"student id : "<<Student_id<<endl;
@@ -183,6 +188,7 @@ class Student{
 			cout<<"Stuent gender : "<<Sgender<<endl;
 			cout<<"Student branch : "<<Sbranch<<endl;
 			cout<<"Student Fees : "<<Sfees<<endl;
+			cout<<"Student cgpa :"<<cgpa<<endl;
 		}
 };
 
@@ -236,11 +242,34 @@ return -1;
 }
 //class Student::public University{
 //	
-//}; 
+//};
+
+
+ 
 int main(){
+<<<<<<< Updated upstream
 	int student_array[10000]={};
 	int teacher_array[10000];
 	int staff_array[10000];
+=======
+	
+	Student s1[10]={Student(101,"venkatesh",20,'M',"CSE",45000,9.0),
+	Student(102,"swaroop",20,'M',"CSE",45000,9.0),
+	Student(103,"ganesh",22,'M',"CSE",45000,8.5),
+   	Student(104,"rakesh",20,'M',"CSE",60000,8.0),
+   	Student(105,"rasmika",19,'F',"CSE",45000,9.5),
+   	Student(106,"rashi",20,'F',"CSE",45000,9.1),
+   	Student(107,"sharath",20,'M',"CSE",45000,9.0),
+   	Student(108,"suresh",20,'M',"CSE",45000,9.0),
+  	Student(109,"mahesh",20,'M',"CSE",60000,9.0),
+	Student(110,"samantha",21,'F',"CSE",45000,9.4),
+};
+	
+
+	int Student_array[10]={101,102,103,104,105,106,107,108,109,110};
+	int teacher_array[10]={2501,2502,2503,2504,2505,2506,2507,2508,2509,2510};
+	int staff_array[10]={901,902,903,904,905,906,907,908,909,910};
+>>>>>>> Stashed changes
 //	ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 	cout<<"**************************************UNIVERSITY MANAGEMENT SYSTEM*************************\n";
 	cout<<"Welcome to Interface\n";
@@ -257,17 +286,59 @@ int main(){
 		cout<<"Please confrim you as a Student by entering the id"<<endl;
 		int Student_id;
 		cin>>Student_id;
-		if(searchstudentId(Student_id,student_array)==true){
+		if(searchstudentId(Student_id,Student_array)==true){
 			cout<<"Login Sucessfull"<<endl;
 	cout<<"What do you want to do?"<<endl;
+
+			int number;
+			bool value=true;
+			while(value){
 			cout<<"1.Enter 1 to get your details"<<endl;
 			cout<<"2.Enter 2 to see your academics"<<endl;
 			cout<<"3.Enter 3 to see your score"<<endl;
 			cout<<"4.Enter 4 to see your balance"<<endl;
 			cout<<"5.Enter 5 to manage your mess details"<<endl;
+<<<<<<< Updated upstream
 			int number_student;
 			cin>>number_stduent;
 			
+=======
+				cin>>number;
+				if(number==1){
+					cout<<"Details are"<<endl;
+					s1[10].getAllStDetails();
+					
+				}
+				if(number==2){
+					cout<<"Details are"<<endl;
+					cout<<"SNO    "<<"Name"<<"timings"<<endl;
+					cout<<"1       "<<"phy"	<<"5:30"<<endl;			
+					}
+				if(number==3){
+					cout<<"CGPA: "<<endl;
+				}
+				if(number==4){
+					cout<<"CGPA"<<endl;
+					
+				}
+				if(number==5){
+					cout<<"Details are"<<endl;
+					
+				}
+
+
+					cout<<"Would you like to continue?(y/n)"<<endl;
+					char decision;
+					cin>>decision;
+					if(decision=='n' ||decision=='N'){
+						break;
+					}
+					else if(decision=='y' || decision=='Y'){
+						continue;
+					}
+				
+			}
+>>>>>>> Stashed changes
 			break;
 		}
 		else{
