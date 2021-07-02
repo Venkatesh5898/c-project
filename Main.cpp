@@ -238,9 +238,9 @@ return -1;
 //	
 //}; 
 int main(){
-	int student_array[10]={101,102,103,104,105,106,107,108,109,110};
-	int teacher_array[10]={2501,2502,2503,2504,2505,2506,2507,2508,2509,2510};
-	int staff_array[10]={901,902,903,904,905,906,907,908,909,910};
+	int student_array[10000]={};
+	int teacher_array[10000];
+	int staff_array[10000];
 //	ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 	cout<<"**************************************UNIVERSITY MANAGEMENT SYSTEM*************************\n";
 	cout<<"Welcome to Interface\n";
@@ -265,6 +265,9 @@ int main(){
 			cout<<"3.Enter 3 to see your score"<<endl;
 			cout<<"4.Enter 4 to see your balance"<<endl;
 			cout<<"5.Enter 5 to manage your mess details"<<endl;
+			int number_student;
+			cin>>number_stduent;
+			
 			break;
 		}
 		else{
