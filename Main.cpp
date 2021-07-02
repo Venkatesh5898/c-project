@@ -303,6 +303,7 @@ int main(){
 						}
 					}
 					s1[i].getAllStDetails();
+				
 					
 				}
 				if(number==2){
